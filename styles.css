@@ -29,7 +29,8 @@ html .image-container, body .image-container, main .image-container {
   border-radius: 4px;
   align-self: center;
   margin: 50px 0;
-  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease-out;
+  box-shadow: 3px 3px 15px black;
 }
 html .image-container img, body .image-container img, main .image-container img {
   width: inherit;
@@ -40,6 +41,7 @@ html .image-container img, body .image-container img, main .image-container img 
 }
 html .image-container:hover, body .image-container:hover, main .image-container:hover {
   transform: translateY(-10px);
+  box-shadow: 10px 10px 15px black;
 }
 html #about-me, body #about-me, main #about-me {
   display: flex;
@@ -64,11 +66,10 @@ html header p, body header p, main header p {
   margin: 0;
   color: rgba(255, 255, 255, 0.48);
   cursor: pointer;
-  transition: color 300ms cubic-bezier(0.215, 0.61, 0.355, 1), transform 220ms ease-in-out;
+  transition: color 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 html header p:hover, body header p:hover, main header p:hover {
-  color: rgb(77, 255, 148);
-  transform: scale(1.2);
+  color: rgba(77, 255, 148, 0.7);
 }
 html header .hamburger-menu, body header .hamburger-menu, main header .hamburger-menu {
   display: flex;
@@ -86,11 +87,11 @@ html header .hamburger-menu > div, body header .hamburger-menu > div, main heade
   transition: background-color 240ms ease-in, width 200ms ease-out;
 }
 html header .hamburger-menu:hover > div:first-of-type, body header .hamburger-menu:hover > div:first-of-type, main header .hamburger-menu:hover > div:first-of-type {
-  background-color: rgb(77, 255, 148);
+  background-color: rgba(77, 255, 148, 0.5);
   width: 20px;
 }
 html header .hamburger-menu:hover > div:nth-of-type(2), body header .hamburger-menu:hover > div:nth-of-type(2), main header .hamburger-menu:hover > div:nth-of-type(2) {
-  background-color: rgb(77, 255, 148);
+  background-color: rgba(77, 255, 148, 0.7);
   width: 30px;
 }
 html header .hamburger-menu:hover > div:nth-of-type(3), body header .hamburger-menu:hover > div:nth-of-type(3), main header .hamburger-menu:hover > div:nth-of-type(3) {
