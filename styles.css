@@ -43,37 +43,37 @@ html .image-container:hover, body .image-container:hover, main .image-container:
   transform: translateY(-10px);
   box-shadow: 10px 10px 15px black;
 }
-html #about-me, body #about-me, main #about-me {
+html #about-me-section, body #about-me-section, main #about-me-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
 }
-html #about-me .article-paragraph, body #about-me .article-paragraph, main #about-me .article-paragraph {
+html #about-me-section #about-me-section > #intro-article, body #about-me-section #about-me-section > #intro-article, main #about-me-section #about-me-section > #intro-article {
+  display: flex;
+  flex-direction: row;
+}
+html #about-me-section .article-paragraph, body #about-me-section .article-paragraph, main #about-me-section .article-paragraph {
   color: rgba(225, 224, 255, 0.81);
 }
-html #about-me #greeting-text, body #about-me #greeting-text, main #about-me #greeting-text {
+html #about-me-section #greeting-paragraph, body #about-me-section #greeting-paragraph, main #about-me-section #greeting-paragraph {
   margin: 0;
   font-size: 1rem;
   text-align: left;
 }
-html #about-me #name-text, body #about-me #name-text, main #about-me #name-text {
+html #about-me-section #name-paragraph, body #about-me-section #name-paragraph, main #about-me-section #name-paragraph {
   margin-top: 0;
   color: rgb(77, 255, 148);
   font-size: 2.4rem;
 }
-html #about-me #intro-text, body #about-me #intro-text, main #about-me #intro-text {
+html #about-me-section #intro-paragraph, body #about-me-section #intro-paragraph, main #about-me-section #intro-paragraph {
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 1.4rem;
   width: 70%;
 }
-html #about-me #aboout-me > article, body #about-me #aboout-me > article, main #about-me #aboout-me > article {
-  display: flex;
-  flex-direction: row;
-}
-html #about-me #projects > p, body #about-me #projects > p, main #about-me #projects > p {
+html #about-me-section #projects > p, body #about-me-section #projects > p, main #about-me-section #projects > p {
   color: black;
   margin: 0;
 }
