@@ -10,8 +10,11 @@ html, body, main {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgb(35, 35, 46);
+  background-color: black;
   font-family: "Nunito", sans-serif;
+}
+html main, html body, body main, body body, main main, main body {
+  background-color: rgb(35, 35, 46);
 }
 html header, body header, main header {
   height: 80px;
@@ -113,15 +116,22 @@ html #about-me-section .image-container, body #about-me-section .image-container
   margin: 50px 0;
   transition: transform 300ms ease-in-out, box-shadow 300ms ease-out;
   box-shadow: 3px 3px 15px black;
+  position: relative;
 }
-html #about-me-section .image-container img, body #about-me-section .image-container img, main #about-me-section .image-container img {
+html #about-me-section .image-container #me-image, body #about-me-section .image-container #me-image, main #about-me-section .image-container #me-image {
   width: inherit;
   height: inherit;
   border-radius: 4px;
   -o-object-fit: cover;
      object-fit: cover;
 }
+html #about-me-section .image-container #flag-svg, body #about-me-section .image-container #flag-svg, main #about-me-section .image-container #flag-svg {
+  position: absolute;
+  top: 10%;
+  left: 130%;
+  transform: translate(-50%, -50%);
+}
 html #about-me-section .image-container:hover, body #about-me-section .image-container:hover, main #about-me-section .image-container:hover {
-  transform: translateY(-10px);
+  transform: translateX(-30px);
   box-shadow: 10px 10px 15px black;
 }/*# sourceMappingURL=styles.css.map */
