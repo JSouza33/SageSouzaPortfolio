@@ -83,7 +83,7 @@ html, body, main {
     #intro-paragraph{ 
       margin-top: 40px; 
       margin-bottom: 40px;
-      font-size: 1.4rem; 
+      font-size: 1.2rem; 
       width: 70%; 
     }  
     
@@ -95,13 +95,16 @@ html, body, main {
 
   header { 
     height: 80px; 
-    background-color:rgb(35,35,46, .3); 
+    background-color:rgb(35,35,46, .7); 
     margin: 0; 
     padding: 0;  
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    padding: 0 10%; 
+    padding: 0 10%;  
+    position: sticky; 
+    top: 0px; 
+    z-index: 1;
 
     #header-logo { 
       font-size: 1.3rem; 

@@ -70,7 +70,7 @@ html #about-me-section #name-paragraph, body #about-me-section #name-paragraph, 
 html #about-me-section #intro-paragraph, body #about-me-section #intro-paragraph, main #about-me-section #intro-paragraph {
   margin-top: 40px;
   margin-bottom: 40px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   width: 70%;
 }
 html #about-me-section #projects > p, body #about-me-section #projects > p, main #about-me-section #projects > p {
@@ -79,13 +79,16 @@ html #about-me-section #projects > p, body #about-me-section #projects > p, main
 }
 html header, body header, main header {
   height: 80px;
-  background-color: rgba(35, 35, 46, 0.3);
+  background-color: rgba(35, 35, 46, 0.7);
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10%;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 html header #header-logo, body header #header-logo, main header #header-logo {
   font-size: 1.3rem;
