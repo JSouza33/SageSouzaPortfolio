@@ -87,7 +87,7 @@ html header, body header, main header {
   justify-content: space-between;
   padding: 0 10%;
 }
-html header p, body header p, main header p {
+html header #header-logo, body header #header-logo, main header #header-logo {
   font-size: 1.3rem;
   padding: 0;
   margin: 0;
@@ -95,8 +95,8 @@ html header p, body header p, main header p {
   cursor: pointer;
   transition: color 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-html header p:hover, body header p:hover, main header p:hover {
-  color: rgba(77, 255, 148, 0.7);
+html header #header-logo:hover, body header #header-logo:hover, main header #header-logo:hover {
+  color: rgb(77, 255, 148);
 }
 html header .hamburger-menu, body header .hamburger-menu, main header .hamburger-menu {
   display: flex;
