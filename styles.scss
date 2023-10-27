@@ -88,12 +88,13 @@ html, body, main {
     padding: 40px 0; 
     background-color: map-get($theme-colors, background);
     z-index:0;
-    #intro-article {  
-      padding: 0 10%;
-    } 
 
     .section__article{ 
-      padding: 0 10%;
+      padding: 0 10%; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   } 
 
@@ -110,8 +111,7 @@ html, body, main {
 
     #greeting-paragraph {  
       margin: 0;
-      font-size: 1rem; 
-      text-align: left; 
+      font-size: 1.2rem;
     }
     
     #name-paragraph{  
@@ -121,7 +121,6 @@ html, body, main {
     } 
     
     #intro-paragraph{ 
-      margin-top: 40px; 
       margin-bottom: 40px;
       font-size: 1.2rem; 
       width: 70%; 
@@ -145,8 +144,15 @@ html, body, main {
       }  
     } 
     .section__paragraph{ 
-      width: 70%;
+      width: 80%;
       color: rgb(225,224,255,81%);
+      font-size: 1.2rem;  
+      &::before{ 
+        content: '> About Me'; 
+        position: absolute; 
+        color: map-get($theme-colors, accent);
+        transform: translate(-30px, -30px); 
+      }
     }
   } 
 }   

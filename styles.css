@@ -75,11 +75,12 @@ html .page-section, body .page-section, main .page-section {
   background-color: rgb(35, 35, 46);
   z-index: 0;
 }
-html .page-section #intro-article, body .page-section #intro-article, main .page-section #intro-article {
-  padding: 0 10%;
-}
 html .page-section .section__article, body .page-section .section__article, main .page-section .section__article {
   padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 html #about-me-section, body #about-me-section, main #about-me-section {
   display: flex;
@@ -93,8 +94,7 @@ html #about-me-section .article-paragraph, body #about-me-section .article-parag
 }
 html #about-me-section #greeting-paragraph, body #about-me-section #greeting-paragraph, main #about-me-section #greeting-paragraph {
   margin: 0;
-  font-size: 1rem;
-  text-align: left;
+  font-size: 1.2rem;
 }
 html #about-me-section #name-paragraph, body #about-me-section #name-paragraph, main #about-me-section #name-paragraph {
   margin-top: 0;
@@ -102,7 +102,6 @@ html #about-me-section #name-paragraph, body #about-me-section #name-paragraph, 
   font-size: 2.4rem;
 }
 html #about-me-section #intro-paragraph, body #about-me-section #intro-paragraph, main #about-me-section #intro-paragraph {
-  margin-top: 40px;
   margin-bottom: 40px;
   font-size: 1.2rem;
   width: 70%;
@@ -125,6 +124,13 @@ html #about-me-section .image-container #me-image, body #about-me-section .image
      object-fit: cover;
 }
 html #about-me-section .section__paragraph, body #about-me-section .section__paragraph, main #about-me-section .section__paragraph {
-  width: 70%;
+  width: 80%;
   color: rgba(225, 224, 255, 0.81);
+  font-size: 1.2rem;
+}
+html #about-me-section .section__paragraph::before, body #about-me-section .section__paragraph::before, main #about-me-section .section__paragraph::before {
+  content: "> About Me";
+  position: absolute;
+  color: rgb(77, 255, 148);
+  transform: translate(-30px, -30px);
 }/*# sourceMappingURL=styles.css.map */
