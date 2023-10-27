@@ -85,10 +85,6 @@ html #about-me-section, body #about-me-section, main #about-me-section {
   justify-content: flex-start;
   position: relative;
 }
-html #about-me-section #about-me-section > #intro-article, body #about-me-section #about-me-section > #intro-article, main #about-me-section #about-me-section > #intro-article {
-  display: flex;
-  flex-direction: row;
-}
 html #about-me-section .article-paragraph, body #about-me-section .article-paragraph, main #about-me-section .article-paragraph {
   color: rgba(225, 224, 255, 0.81);
 }
@@ -125,18 +121,7 @@ html #about-me-section .image-container #me-image, body #about-me-section .image
   -o-object-fit: cover;
      object-fit: cover;
 }
-html #about-me-section .image-container #flag-svg, body #about-me-section .image-container #flag-svg, main #about-me-section .image-container #flag-svg {
-  opacity: 0;
-  position: absolute;
-  top: 10%;
-  left: 130%;
-  transform: translate(-50%, -50%);
-  transition: opacity 300ms ease-in-out;
-}
-html #about-me-section .image-container:hover, body #about-me-section .image-container:hover, main #about-me-section .image-container:hover {
-  transform: translateX(-30px);
-  box-shadow: 10px 10px 15px black;
-}
-html #about-me-section .image-container:hover > #flag-svg, body #about-me-section .image-container:hover > #flag-svg, main #about-me-section .image-container:hover > #flag-svg {
-  opacity: 1;
+html #about-me-section .section__paragraph, body #about-me-section .section__paragraph, main #about-me-section .section__paragraph {
+  width: 70%;
+  color: red;
 }/*# sourceMappingURL=styles.css.map */
