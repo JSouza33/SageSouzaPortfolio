@@ -78,6 +78,9 @@ html .page-section, body .page-section, main .page-section {
 html .page-section #intro-article, body .page-section #intro-article, main .page-section #intro-article {
   padding: 0 10%;
 }
+html .page-section .section__article, body .page-section .section__article, main .page-section .section__article {
+  padding: 0 10%;
+}
 html #about-me-section, body #about-me-section, main #about-me-section {
   display: flex;
   flex-direction: column;
@@ -123,5 +126,5 @@ html #about-me-section .image-container #me-image, body #about-me-section .image
 }
 html #about-me-section .section__paragraph, body #about-me-section .section__paragraph, main #about-me-section .section__paragraph {
   width: 70%;
-  color: red;
+  color: rgba(225, 224, 255, 0.81);
 }/*# sourceMappingURL=styles.css.map */

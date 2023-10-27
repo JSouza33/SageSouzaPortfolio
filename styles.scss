@@ -9,7 +9,7 @@
 $theme-colors: (
   accent: rgb(77,255,148), 
   background: rgb(35,35,46)
-); 
+);
 
 html, body, main { 
   width: 100%; 
@@ -90,6 +90,10 @@ html, body, main {
     z-index:0;
     #intro-article {  
       padding: 0 10%;
+    } 
+
+    .section__article{ 
+      padding: 0 10%;
     }
   } 
 
@@ -142,7 +146,7 @@ html, body, main {
     } 
     .section__paragraph{ 
       width: 70%;
-      color: red;
+      color: rgb(225,224,255,81%);
     }
   } 
 }   
