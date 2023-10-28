@@ -13,7 +13,7 @@ html, body, main {
   background-color: black;
   font-family: "Nunito", sans-serif;
 }
-html main, html body, body main, body body, main main, main body {
+html body, html main, body body, body main, main body, main main {
   background-color: rgb(35, 35, 46);
 }
 html header, body header, main header {
@@ -26,8 +26,10 @@ html header, body header, main header {
   justify-content: space-between;
   padding: 0 10%;
   position: sticky;
-  top: 0;
+  top: 0px;
   z-index: 1;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 html header #header-logo, body header #header-logo, main header #header-logo {
   font-size: 1.3rem;
@@ -71,23 +73,30 @@ html .page-section, body .page-section, main .page-section {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 40px 0;
+  padding: 10px 0;
   background-color: rgb(35, 35, 46);
   z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 html .page-section .section__article, body .page-section .section__article, main .page-section .section__article {
-  padding: 0 10%;
+  padding: 0% 0%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 90%;
 }
 html #about-me-section, body #about-me-section, main #about-me-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   position: relative;
+}
+html #about-me-section #intro-article, body #about-me-section #intro-article, main #about-me-section #intro-article {
+  margin-top: 10px;
 }
 html #about-me-section .article-paragraph, body #about-me-section .article-paragraph, main #about-me-section .article-paragraph {
   color: rgba(225, 224, 255, 0.81);
@@ -97,12 +106,13 @@ html #about-me-section #greeting-paragraph, body #about-me-section #greeting-par
   font-size: 1.2rem;
 }
 html #about-me-section #name-paragraph, body #about-me-section #name-paragraph, main #about-me-section #name-paragraph {
-  margin-top: 0;
+  margin: 0;
   color: rgb(77, 255, 148);
-  font-size: 2.4rem;
+  font-size: clamp(2rem, 6vw + 1rem, 8rem);
+  width: 70%;
 }
 html #about-me-section #intro-paragraph, body #about-me-section #intro-paragraph, main #about-me-section #intro-paragraph {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 1.2rem;
   width: 70%;
 }
@@ -123,7 +133,13 @@ html #about-me-section .image-container #me-image, body #about-me-section .image
   -o-object-fit: cover;
      object-fit: cover;
 }
+html #about-me-section .about-me__article, body #about-me-section .about-me__article, main #about-me-section .about-me__article {
+  border-right: 2px solid rgb(77, 255, 148);
+  border-bottom: 2px solid rgb(77, 255, 148);
+  width: clamp(90%, 3vw + 1px, 500px);
+}
 html #about-me-section .section__paragraph, body #about-me-section .section__paragraph, main #about-me-section .section__paragraph {
+  word-spacing: 2px;
   width: 80%;
   color: rgba(225, 224, 255, 0.81);
   font-size: 1.2rem;
