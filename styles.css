@@ -73,7 +73,6 @@ html .page-section, body .page-section, main .page-section {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 10px 0;
   background-color: rgb(35, 35, 46);
   z-index: 0;
   display: flex;
@@ -152,5 +151,6 @@ html #about-me-section .section__paragraph::before, body #about-me-section .sect
   transform: translate(-30px, -30px);
 }
 html #projects-section, body #projects-section, main #projects-section {
+  z-index: 0;
   background: linear-gradient(180deg, rgb(35, 35, 46), rgb(77, 255, 148) 80%);
 }/*# sourceMappingURL=styles.css.map */
