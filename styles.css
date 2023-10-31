@@ -83,7 +83,6 @@ html .page-section .section__article, body .page-section .section__article, main
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 html #about-me-section, body #about-me-section, main #about-me-section {
   display: flex;
@@ -93,8 +92,21 @@ html #about-me-section, body #about-me-section, main #about-me-section {
   position: relative;
   height: auto;
 }
+html #about-me-section::after, body #about-me-section::after, main #about-me-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 50%;
+  border-right: 1px solid rgb(77, 255, 148);
+  border-bottom: 1px solid rgb(77, 255, 148);
+}
 html #about-me-section #intro-article, body #about-me-section #intro-article, main #about-me-section #intro-article {
   margin-top: 30px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 html #about-me-section .article-paragraph, body #about-me-section .article-paragraph, main #about-me-section .article-paragraph {
   color: rgba(225, 224, 255, 0.81);
@@ -115,8 +127,8 @@ html #about-me-section #intro-paragraph, body #about-me-section #intro-paragraph
   width: 70%;
 }
 html #about-me-section .image-container, body #about-me-section .image-container, main #about-me-section .image-container {
-  width: 200px;
-  height: 200px;
+  width: 217px;
+  height: 260px;
   border-radius: 12px;
   align-self: center;
   margin: 50px 0;
@@ -139,8 +151,6 @@ html #about-me-section .section__paragraph, body #about-me-section .section__par
   color: rgba(225, 224, 255, 0.81);
   font-size: 1.2rem;
   padding: 20px;
-  border-right: 2px solid rgb(77, 255, 148);
-  border-bottom: 2px solid rgb(77, 255, 148);
 }
 html #about-me-section .section__paragraph::before, body #about-me-section .section__paragraph::before, main #about-me-section .section__paragraph::before {
   content: "> About Me";
@@ -151,6 +161,7 @@ html #about-me-section .section__paragraph::before, body #about-me-section .sect
 }
 html #projects-section, body #projects-section, main #projects-section {
   z-index: 0;
+  height: auto;
   background: linear-gradient(180deg, rgb(35, 35, 46), rgb(77, 255, 148) 60%);
   display: flex;
   flex-direction: column;
@@ -160,15 +171,26 @@ html #projects-section .projects__article, body #projects-section .projects__art
   padding: 20px;
   margin-top: 100px;
   width: 80%;
-  height: 400px;
   border-left: 3px solid black;
   border-top: 3px solid black;
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 html #projects-section .projects__article::before, body #projects-section .projects__article::before, main #projects-section .projects__article::before {
   content: "> My Work";
   font-weight: 500;
   position: absolute;
   color: black;
-  transform: translateY(-50px);
+  top: 0px;
+}
+html #projects-section .projects__article .projects-card, body #projects-section .projects__article .projects-card, main #projects-section .projects__article .projects-card {
+  margin-top: 30px;
+  width: 80%;
+  height: 350px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
 }/*# sourceMappingURL=styles.css.map */
