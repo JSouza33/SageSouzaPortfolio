@@ -88,25 +88,15 @@ html #about-me-section, body #about-me-section, main #about-me-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   height: auto;
 }
-html #about-me-section::after, body #about-me-section::after, main #about-me-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 90%;
-  height: 50%;
-  border-right: 1px solid rgb(77, 255, 148);
-  border-bottom: 1px solid rgb(77, 255, 148);
-}
 html #about-me-section #intro-article, body #about-me-section #intro-article, main #about-me-section #intro-article {
-  margin-top: 30px;
   width: 80%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 html #about-me-section .article-paragraph, body #about-me-section .article-paragraph, main #about-me-section .article-paragraph {
   color: rgba(225, 224, 255, 0.81);
@@ -117,14 +107,15 @@ html #about-me-section #greeting-paragraph, body #about-me-section #greeting-par
 }
 html #about-me-section #name-paragraph, body #about-me-section #name-paragraph, main #about-me-section #name-paragraph {
   margin: 0;
+  margin-top: 30px;
   color: rgb(77, 255, 148);
   font-size: clamp(2rem, 6vw + 1rem, 8rem);
   width: 70%;
+  display: flex;
+  justify-content: flex-start;
 }
 html #about-me-section #intro-paragraph, body #about-me-section #intro-paragraph, main #about-me-section #intro-paragraph {
-  margin-bottom: 20px;
   font-size: 1.2rem;
-  width: 70%;
 }
 html #about-me-section .image-container, body #about-me-section .image-container, main #about-me-section .image-container {
   width: 217px;
@@ -144,20 +135,32 @@ html #about-me-section .image-container #me-image, body #about-me-section .image
      object-fit: cover;
 }
 html #about-me-section .about-me__article, body #about-me-section .about-me__article, main #about-me-section .about-me__article {
-  width: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  html #about-me-section #intro-article, body #about-me-section #intro-article, main #about-me-section #intro-article {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  html #about-me-section .about-me__article, body #about-me-section .about-me__article, main #about-me-section .about-me__article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  html #about-me-section .about-me__article .image-container, body #about-me-section .about-me__article .image-container, main #about-me-section .about-me__article .image-container {
+    margin-right: 40px;
+  }
 }
 html #about-me-section .section__paragraph, body #about-me-section .section__paragraph, main #about-me-section .section__paragraph {
   width: 80%;
+  max-width: 500px;
   color: rgba(225, 224, 255, 0.81);
   font-size: 1.2rem;
   padding: 20px;
-}
-html #about-me-section .section__paragraph::before, body #about-me-section .section__paragraph::before, main #about-me-section .section__paragraph::before {
-  content: "> About Me";
-  font-weight: 400;
-  position: absolute;
-  color: rgb(77, 255, 148);
-  transform: translateY(-50px);
+  z-index: 0;
 }
 html #projects-section, body #projects-section, main #projects-section {
   z-index: 0;
@@ -181,7 +184,7 @@ html #projects-section .projects__article, body #projects-section .projects__art
   position: relative;
 }
 html #projects-section .projects__article::before, body #projects-section .projects__article::before, main #projects-section .projects__article::before {
-  content: "> My Work";
+  content: "";
   font-weight: 500;
   position: absolute;
   color: black;

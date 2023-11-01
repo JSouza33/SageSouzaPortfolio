@@ -87,7 +87,6 @@ html, body, main {
     height: 100%; 
     margin: 0;
     background-color: map-get($theme-colors, background);
-    // z-index:0;
     display: flex; 
     align-items: center; 
     justify-content: center;
@@ -96,8 +95,7 @@ html, body, main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; 
-      // width: 100%;
+      justify-content: center;
     }
   } 
 
@@ -105,25 +103,16 @@ html, body, main {
     display: flex; 
     flex-direction: column;
     align-items: center; 
-    justify-content: center; 
+    justify-content: flex-start; 
     position: relative;  
-    height: auto;
-    
-    &::after { 
-      content: ''; 
-      position: absolute;
-      bottom: 0;
-      width: 90%;  
-      height: 50%; 
-      border-right: 1px solid map-get($theme-colors, accent );
-      border-bottom: 1px solid map-get($theme-colors, accent );
-    }
+    height:auto;
+
     #intro-article { 
-      margin-top: 30px; 
+      // margin-top: 30px; 
       width: 80%; 
       display: flex; 
       justify-content: flex-start; 
-      align-items: center;
+      align-items: flex-start;
     }
 
     .article-paragraph { 
@@ -137,15 +126,18 @@ html, body, main {
     
     #name-paragraph{  
       margin: 0;
+      margin-top: 30px;
       color: map-get($theme-colors, accent);
       font-size:clamp(2rem, 6vw + 1rem, 8rem);  
       width: 70%;
+      display: flex;
+      justify-content: flex-start;
     } 
     
     #intro-paragraph{ 
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
       font-size: 1.2rem; 
-      width: 70%; 
+      // width: 70%; 
     }   
 
     .image-container {
@@ -167,23 +159,36 @@ html, body, main {
     }
 
     .about-me__article {
-      width: 100%;
+      width: 80%; 
+      display: flex; 
+      flex-direction: column;
+      
+    } 
+
+    @media (min-width:700px ) {
+      #intro-article { 
+        justify-content: flex-start; 
+        align-items: flex-start;
+      }
+      .about-me__article{ 
+        display: flex;
+        flex-direction: row; 
+        justify-content: flex-start;
+        align-items: flex-start;
+        .image-container{ 
+          margin-right: 40px;
+        }
+      }
     }
 
     .section__paragraph{  
-      // word-spacing: 2px;
-      width: 80%;
+      // width: clamp(300px, 5px, 600px);
+      width: 80%; 
+      max-width: 500px;
       color: rgb(225,224,255,81%);
       font-size: 1.2rem;
       padding: 20px;
-     
-      &::before{ 
-        content: '> About Me';
-        font-weight: 400; 
-        position: absolute; 
-        color: map-get($theme-colors, accent);
-        transform: translateY(-50px); 
-      }
+      z-index: 0;
     }
   } 
 
@@ -210,7 +215,7 @@ html, body, main {
       align-items: center; 
       position: relative;
       &::before { 
-        content: '> My Work';
+        content: '';
         font-weight: 500;
         position: absolute; 
         color: black; 
