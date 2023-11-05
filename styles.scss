@@ -108,15 +108,12 @@ html, body, main {
     height:auto;
 
     #intro-article { 
-      // margin-top: 30px; 
+      margin-top: 30px; 
       width: 80%; 
       display: flex; 
-      justify-content: flex-start; 
-      align-items: flex-start;
-    }
-
-    .article-paragraph { 
-      color: rgb(225,224,255,81%);
+      // justify-content: space-around;
+      align-items: center; 
+      justify-content: center;
     }
 
     #greeting-paragraph {  
@@ -124,26 +121,15 @@ html, body, main {
       font-size: 1.2rem;
     }
     
-    #name-paragraph{  
-      margin: 0;
-      margin-top: 30px;
-      color: map-get($theme-colors, accent);
-      font-size:clamp(2rem, 6vw + 1rem, 8rem);  
-      width: 70%;
-      display: flex;
-      justify-content: flex-start;
-    } 
-    
     #intro-paragraph{ 
-      // margin-bottom: 20px;
-      font-size: 1.2rem; 
-      // width: 70%; 
+      margin: 0;
+      font-size: 1.5rem; 
     }   
 
     .image-container {
       width: 217px; 
       height: 260px; 
-      border-radius: 12px;  
+      border-radius: 6px;  
       align-self: center; 
       margin: 50px 0; 
       transition: transform 300ms ease-in-out, box-shadow 300ms ease-out;
@@ -162,35 +148,72 @@ html, body, main {
       width: 80%; 
       display: flex; 
       flex-direction: column;
-      
+      flex-wrap: wrap;
+
+      #name-paragraph{  
+        margin: 0;
+        margin-top: 50px;
+        color: map-get($theme-colors, accent);
+        font-size:clamp(2rem, 6vw + 1rem, 8rem);  
+        position: relative;
+        // width: auto;
+        // display: flex;
+        // justify-content: flex-start; 
+        // position: relative;
+        &::before{ 
+          content: 'Hello, I am'; 
+          position: absolute; 
+          top: -20px; 
+          left: 0px;
+          font-size: 1.1rem; 
+          color: rgb(225,224,255,81%);
+        }
+      } 
+      .section__paragraph{
+        width: min(300px, 500px);
+        color: rgb(225,224,255,81%);
+        font-size: 1.2rem;
+        z-index: 0;
+      }
     } 
 
     @media (min-width:700px ) {
-      #intro-article { 
-        justify-content: flex-start; 
-        align-items: flex-start;
-      }
       .about-me__article{ 
         display: flex;
         flex-direction: row; 
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: space-evenly;
+        align-items: center;
         .image-container{ 
+          order: 0;
           margin-right: 40px;
         }
-      }
+        #name-paragraph{ 
+          order: -1;
+          margin: 0;
+          margin-top: 50px;
+          color: map-get($theme-colors, accent);
+          font-size:clamp(2rem, 6vw + 1rem, 8rem);
+          display: flex;
+          justify-content: center; 
+          position: relative;
+          &::before {  
+            content: 'Hello, I am'; 
+            position: absolute; 
+            top: -20px; 
+            font-size: 1.1rem; 
+            color: rgb(225,224,255,81%);
+          }
+        } 
+        .section__paragraph{  
+          // width: clamp(300px, 5px, 600px);
+          color: rgb(225,224,255,81%);
+          font-size: 1.2rem;
+          // padding: 20px;
+          z-index: 0;
+        }
+      } 
     }
-
-    .section__paragraph{  
-      // width: clamp(300px, 5px, 600px);
-      width: 80%; 
-      max-width: 500px;
-      color: rgb(225,224,255,81%);
-      font-size: 1.2rem;
-      padding: 20px;
-      z-index: 0;
-    }
-  } 
+  }
 
   #projects-section {
     z-index: 0;
